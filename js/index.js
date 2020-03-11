@@ -57,6 +57,47 @@ logoImg.src = 'img/logo.png';
 
 // Update cta-text
 const ctaText = document.querySelector('.cta-text h1');
-ctaText.textContent = 'DOM Is Awesome';
+ctaText.innerHTML = 'DOM<br> Is<br> Awesome';
 
+// Update button
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = 'Get Started';
 
+// Update cta-img
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = 'img/header-img.png';
+
+// Update main-content
+const topContentHeaders = document.querySelectorAll('.top-content h4');
+topContentHeaders[0].textContent = 'Features';
+topContentHeaders[1].textContent = 'About';
+
+const topContentPs = document.querySelectorAll('.top-content p');
+topContentPs[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+topContentPs[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = 'img/mid-page-accent.jpg';
+
+const bottomContentHeaders = document.querySelectorAll('.bottom-content h4');
+bottomContentHeaders[0].textContent = 'Services';
+bottomContentHeaders[1].textContent = 'Product';
+bottomContentHeaders[2].textContent = 'Vision';
+
+const bottomContentPs = document.querySelectorAll('.bottom-content p');
+bottomContentPs[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomContentPs[1].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomContentPs[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+// Update contact
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = 'Contact';
+
+const contactPs = document.querySelectorAll('.contact p');
+contactPs[0].innerHTML = '123 Way 456 Street<br> Somerwhere, USA';
+contactPs[1].textContent = '1 (888) 888-8888';
+contactPs[2].textContent = 'sales@greatidea.io';
+
+// Update footer
+const footer = document.querySelector('footer p');
+footer.textContent = 'Copyright Great Idea! 2018';
