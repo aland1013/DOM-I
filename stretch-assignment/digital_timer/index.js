@@ -26,7 +26,14 @@ msHundreds.textContent = '0';
 const msTens = document.querySelector('#msTens');
 msTens.textContent = '0';
 
-let timer = window.setInterval(updateTimer, 10);
+let timer;
+
+document.querySelector('#btn').addEventListener('click', () => {
+  timer = window.setInterval(updateTimer, 10);
+  document.querySelector('#btn').outerHTML = '<button id="btn" disabled>Start</button>';
+});
+
+// let timer = window.setInterval(updateTimer, 10);
 
 setTimeout(() => { 
   clearInterval(timer); 
