@@ -112,3 +112,7 @@ document.querySelector('nav').appendChild(nav1);
 const nav2 = document.createElement('a');
 nav2.textContent = 'Culture';
 document.querySelector('nav').prepend(nav2);
+
+ctaButton.addEventListener('click', () => {
+  ctaText.innerHTML = 'DOM<br> Es<br> Asombroso';
+});
