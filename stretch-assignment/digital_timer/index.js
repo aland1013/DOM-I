@@ -10,7 +10,6 @@ updateTimer = () => {
         secondOnes.textContent = '0'
         secondTens.textContent = '1'
       }
-      
     }
   }
 }
@@ -27,11 +26,15 @@ msHundreds.textContent = '0';
 const msTens = document.querySelector('#msTens');
 msTens.textContent = '0';
 
-
 let timer = window.setInterval(updateTimer, 10);
 
 setTimeout(() => { 
   clearInterval(timer); 
-  document.querySelectorAll('.digit').forEach(digit => digit.style.color = 'red');
+  document.querySelector('.digits').className = 'digits redDigit';
+  secondTens.textContent = '1';
+  secondOnes.textContent = '0';
+  msHundreds.textContent = '0';
+  msTens.textContent = '0';
+
 }, 10000);
 
