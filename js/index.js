@@ -103,5 +103,12 @@ const footer = document.querySelector('footer p');
 footer.textContent = 'Copyright Great Idea! 2018';
 
 // Add new content
-console.log('navLinks', navLinks);
 navLinks.forEach(link => link.style.color = 'green');
+
+const nav1 = document.createElement('a');
+nav1.textContent = 'Team';
+document.querySelector('nav').appendChild(nav1);
+
+const nav2 = document.createElement('a');
+nav2.textContent = 'Culture';
+document.querySelector('nav').prepend(nav2);
