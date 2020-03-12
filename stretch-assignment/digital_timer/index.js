@@ -3,7 +3,7 @@ updateTimer = () => {
   if (msTens.textContent === '10') {
     msTens.textContent = '0';
     msHundreds.textContent++;
-    if(msHundreds.textContent == '10') {
+    if(msHundreds.textContent === '10') {
       msHundreds.textContent = '0';
       secondOnes.textContent++;
       if (secondOnes.textContent === '10') {
@@ -31,17 +31,15 @@ let timer;
 document.querySelector('#btn').addEventListener('click', () => {
   timer = window.setInterval(updateTimer, 10);
   document.querySelector('#btn').outerHTML = '<button id="btn" disabled>Start</button>';
+
+  setTimeout(() => { 
+    clearInterval(timer); 
+    document.querySelector('.digits').className = 'digits redDigit';
+    secondTens.textContent = '1';
+    secondOnes.textContent = '0';
+    msHundreds.textContent = '0';
+    msTens.textContent = '0';
+  
+  }, 10000);
 });
-
-// let timer = window.setInterval(updateTimer, 10);
-
-setTimeout(() => { 
-  clearInterval(timer); 
-  document.querySelector('.digits').className = 'digits redDigit';
-  secondTens.textContent = '1';
-  secondOnes.textContent = '0';
-  msHundreds.textContent = '0';
-  msTens.textContent = '0';
-
-}, 10000);
 
