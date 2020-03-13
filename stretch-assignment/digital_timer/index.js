@@ -34,7 +34,7 @@ document.querySelector('#btn').addEventListener('click', () => {
 
   setTimeout(() => { 
     clearInterval(timer); 
-    document.querySelector('.digits').className = 'digits redDigit';
+    document.querySelector('.digits').classList.toggle('redDigit');
     secondTens.textContent = '1';
     secondOnes.textContent = '0';
     msHundreds.textContent = '0';
